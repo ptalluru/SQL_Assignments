@@ -1,0 +1,83 @@
+1)	WRITE A SQL STATEMENT TO DISPLAY THE LOWEST PAID EMPLOYEE'S (NAME , SALARY , DEPARTMENT NAME)?
+A)	 SELECT e.first_name,d.department_name,e.salary
+   	-> FROM employees e
+    	-> INNER JOIN departments d
+    	-> ON d.department_id=e.department_id
+    	-> WHERE salary=(SELECT min(salary) FROM employees);
+
+2)	LIST MINIMUM SALARY FOR EACH DEPARTMENT ?
+A)	SELECT department_id,MIN(salary)
+    	-> FROM employees
+    	-> GROUP BY department_id;
+
+3)	WRITE A QUERY  BASED ON  FOLLOWING RESULT.
+A)	SELECT e.employee_id,e.first_name,e.job_id,e.salary,d.department_id,d.department_name
+    	-> FROM employees e
+    	-> INNER JOIN departments d
+    	-> ON d.department_id=e.department_id;
+
+4)	LIST ALL THE EMPLOYEES WHO ARE WORKING IN SHIPPING DEPARTMENT
+A)	 SELECT e.employee_id,e.first_name,e.job_id,e.salary,d.department_id,d.department_name
+    	-> FROM employees e
+    	-> INNER JOIN departments d
+    	-> ON d.department_id=e.department_id
+    	-> WHERE department_name='Shipping';
+
+5)	LIST ALL EMPLOYEE WHO ARE WORKING IN SHIPPINGS DEPARTMENT AND
+	EARNING MORE THEN DONALD
+
+A)	 SELECT e.employee_id,e.first_name,e.job_id,e.salary,d.department_id,d.department_name
+    -> FROM employees e
+    -> INNER JOIN departments d
+    -> ON d.department_id=e.department_id
+    -> WHERE department_name='Shipping' and salary > (SELECT salary FROM employees where first_name='Donald') ;
+
+6)	DISPLAY EMPLOYEE NUMBER, NAME,DEPT NUMBER, DEPT NAME, AND LOCATION ?
+A)	SELECT e.employee_id,e.first_name,d.department_id,d.department_name,d.location_id
+    	-> FROM employees e
+    	-> INNER JOIN departments d
+    	-> ON d.department_id=e.department_id ;
+
+7)	DISPLAY THE FOLLOWING RESULT(DNO,Dname,ENAME)
+A)	 SELECT e.first_name,d.department_id,d.department_name
+    	-> FROM employees e
+    	-> INNER JOIN departments d
+    	-> ON d.department_id=e.department_id;
+
+8)	LIST ALL THE EMPLOYEE WHO ARE WORKING IN NEW YORK
+A)	SELECT e.first_name,d.department_id,d.department_name,l.city
+    	-> FROM employees e
+    	-> INNER JOIN departments d
+    	-> ON d.department_id=e.department_id
+    	-> INNER JOIN locations l
+    	-> ON d.location_id=l.location_id;
+
+9)	WRITE A SQL STATEMENT TO DISPLAY THE LOWEST PAID EMPLOYEE'S (NAME , SALARY , DEPARTMENT NAME) IN THE RESPECTIVE DEPARTMENT ?
+A)	SELECT e.first_name,MIN(e.salary),d.department_name
+   	-> FROM employees e
+    	-> INNER JOIN departments d
+    	-> ON d.department_id=e.department_id
+    	-> GROUP BY department_name;
+
+10)	WRITE A SQL STATEMENT TO DISPLAY THE HIGHEST PAID EMPLOYEE'S (NAME, JOB, MANAGER NAME, SALARY AND DEPARTMENT NAME AND DEPARTMENT NO.) IN THE RESPECTIVE DEPARTMENT.
+A)	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
