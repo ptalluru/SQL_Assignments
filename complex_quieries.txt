@@ -77,9 +77,12 @@ A)	 SELECT e1.first_name as manager_name,COUNT(e2.employee_id)
 
 12)	DISPLAY THE NAMES, DESIGNATION AND SALARIES OF ALL EMPLOYEES WHO HAVE MANAGER ALONG WITH MANAGER'S NAME, DESIGNATION AND MANAGER'S SALARY.
 
-	(SELF-JOIN)
+	
 
-A)
+A)	SELECT e.last_name,e.job_id,e.salary,m.last_name,m.job_id,m.salary
+	FROM emplyees e
+	JOIN employees m
+	ON e.manager_id=m.employee_id; 
 
 
 13)	 CREATE THE FOLLOWING TABLES:
@@ -92,7 +95,7 @@ A)
 
 	WRITE A QUERY TO DISPLAY THE FOLLOWING OUTPUT SORTED BY ORDER NO:
 
-A)
+A)	
 
 
 
