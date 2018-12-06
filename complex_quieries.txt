@@ -95,13 +95,13 @@ A)	SELECT e.last_name,e.job_id,e.salary,m.last_name,m.job_id,m.salary
 
 	WRITE A QUERY TO DISPLAY THE FOLLOWING OUTPUT SORTED BY ORDER NO:
 
-A)	
-
-
-
-
-
-
+A)	SELECT o.order_number,o.order_date,i.quantity,i.unit_price,p.product_name
+	FROM orders o
+	INNER JOIN order_item i
+	ON o.order_id = i.order_id
+	INNER JOIN products p
+	ON i.product_id = p.product_id
+	GROUP BY O.order_number;
 
 
 
@@ -120,10 +120,6 @@ A)	SELECT DISTINCT salary
 	ORDER BY salary DESC limit 3;
 
 	
-
-16)	 DISPLAY COMMON RECORDS FROM EMP_1 & EMP_2 TABLES. (USE INTERSECT)
-
-17)	 DISPLAY DEPARTMENT NO WISE TOTAL SALARY WHERE MORE THAN 2 EMPLOYEES EXIST IN A DEPARTMENT.
 
 
 
