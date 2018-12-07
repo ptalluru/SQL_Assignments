@@ -119,7 +119,19 @@ A)	SELECT DISTINCT salary
 	FROM employees
 	ORDER BY salary DESC limit 3;
 
-	
+
+16)	DISPLAY COMMON RECORDS FROM EMP_1 & EMP_2 TABLES. (USE INTERSECT OR RELATED)
+
+A)	SELECT department_id 
+	FROM employees WHERE department_id
+	IN (SELECT department_id FROM department);
+
+17)	DISPLAY DEPARTMENT NO WISE TOTAL SALARY WHERE MORE THAN 2 EMPLOYEES EXIST IN A DEPARTMENT.
+
+A)	SELECT sum(salary),department_id,count(department_id)
+	FROM employees 
+	GROUP BY department_id
+	HAVING count(department_id)>2;
 
 
 
